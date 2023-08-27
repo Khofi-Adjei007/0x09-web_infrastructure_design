@@ -1,0 +1,22 @@
+Infrastructure Design:
+
+Server 1: Web Server
+Server 2: Application Server
+Server 3: Database Server (Primary)
+Server 4: Web Server
+Server 5: Application Server
+Server 6: Database Server (Replica)
+Load Balancer Cluster (HAproxy): Configured as a cluster for high availability.
+Explanation of Specifics:
+
+Additional Elements:
+
+Load Balancer Cluster (HAproxy): Added for distributing incoming traffic across multiple servers, enhancing performance, and ensuring high availability. A cluster setup adds redundancy, so if one load balancer fails, the other can take over seamlessly.
+Separate Components into Their Own Servers:
+
+Web Server: Separating the web server from other components allows for optimized resource allocation and easier maintenance.
+Application Server: Keeps the application logic separate, making updates and scaling more manageable.
+Database Server: Isolates the database for data security and scalability purposes.
+The load balancer cluster ensures that incoming traffic is distributed across the multiple web servers, providing better performance and availability. Splitting components onto separate servers allows for more efficient resource usage and simplifies scaling, maintenance, and troubleshooting.
+
+This infrastructure design aims to achieve better resource utilization, fault tolerance, and scalability by distributing the workload across multiple servers and creating a more resilient system.
